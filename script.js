@@ -1,4 +1,7 @@
-/*const userPassword = prompt("შეიყვანეთ პაროლი");
+if (new Date().getHours() < 18) {
+  document.getElementById("demo").innerHTML = "Good day!";
+}
+const userPassword = prompt("შეიყვანეთ პაროლი");
 
 if (userPassword === "geolabreact123") {
   console.log("წვდომა დაშვებულია");
@@ -8,16 +11,16 @@ if (userPassword === "geolabreact123") {
 
 let sum = 0;
 for (let i = 1; i <= 20; i++) {
-  console.log("enter for loop");
   if (i % 2 === 0) {
     sum += i;
   }
 }
 
-console.log(sum);*/
+console.log("20-მდე ლუწი რიცხვების ჯამია: ", sum);
+
 let balance = 1000;
 let userChoice;
-while (Number(userChoice) !== 4) {
+while (Number(userChoice) !== 4 && userChoice !== null) {
   userChoice = prompt(
     "აირჩიე ოპერაცია:\n1 - შეამოწმე ბალანსი\n2 - შეტანა\n3 - გატანა\n4 - გამოსვლა",
   );
@@ -40,6 +43,7 @@ while (Number(userChoice) !== 4) {
       }
       break;
     case 4:
+    case 0:
       break;
     default:
       alert("შეყვანილი მონაცემი არაზუსტია");
