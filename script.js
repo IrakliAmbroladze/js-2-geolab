@@ -20,7 +20,7 @@ console.log("20-მდე ლუწი რიცხვების ჯამი�
 
 let balance = 1000;
 let userChoice;
-while (Number(userChoice) !== 4 && userChoice !== null) {
+do {
   userChoice = prompt(
     "აირჩიე ოპერაცია:\n1 - შეამოწმე ბალანსი\n2 - შეტანა\n3 - გატანა\n4 - გამოსვლა",
   );
@@ -48,4 +48,4 @@ while (Number(userChoice) !== 4 && userChoice !== null) {
     default:
       alert("შეყვანილი მონაცემი არაზუსტია");
   }
-}
+} while (Number(userChoice) !== 4 && userChoice !== null);
